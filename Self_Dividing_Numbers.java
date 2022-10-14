@@ -1,5 +1,5 @@
 import java.util.*;
-class self 
+class s 
 {
     public static boolean self(int n)
 	{
