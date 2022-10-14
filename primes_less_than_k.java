@@ -1,5 +1,5 @@
 import java.util.*;
-class p
+class prime
 {
     public static boolean isprime(int n)
     {
