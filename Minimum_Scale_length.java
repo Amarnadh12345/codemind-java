@@ -1,5 +1,5 @@
 import java.util.*;
-class s
+class scale
 {
     public static void main(String args[])
     {
