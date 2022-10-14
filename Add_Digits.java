@@ -1,5 +1,5 @@
 import java.util.*;
-class adddigits
+class add
 {
     public static int digit(int n)
     {
