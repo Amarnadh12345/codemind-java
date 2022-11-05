@@ -1,16 +1,18 @@
 import java.util.*;
-class mar
+class a
 {
-     public static void main(String args[])
-     {
-          Scanner sc=new Scanner(System.in);
-          int p,r,t;
-          double a;
-          p=sc.nextInt();
-          r=sc.nextInt();
-          t=sc.nextInt();
-          a=p*(Math.pow((1+(double)r/100),t));
-          System.out.printf("%.2f",a);
+    public static void main(String args[])
+    {
+        Scanner sc = new Scanner(System.in);
+        double principle = sc.nextDouble(); 
+        double rate =sc.nextDouble();
+        double time = sc.nextDouble();
+  
+       
+        double CI = principle *
+                    (Math.pow((1 + rate / 100), time));
           
-     }
+        System.out.printf("%.2f", CI);
+    }
+
 }
