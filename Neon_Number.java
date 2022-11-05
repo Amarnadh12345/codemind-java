@@ -1,29 +1,25 @@
 import java.util.*;
-class a
-{
-    public static int digit(int n)
-    {
-        int sum=0,d;
-        int i=1;
-        while (n>0)
-        {
+class a{
+    public static int sum(int n){
+        int d=0,sum=0;
+        while(n>0){
             d=n%10;
             n=n/10;
             sum+=d;
-            i++;
+            d=0;
         }
         return sum;
     }
-    public static void main(String args[])
-    {
-        Scanner sc=new Scanner(System.in);
-        int n,sq,r;
-        n=sc.nextInt();
-        sq=n*n;
-        r=digit(sq);
-        if (n==r)
+    public static void main(String args[]){
+        Scanner sc = new Scanner(System.in);
+        int n=sc.nextInt();
+        int sq=n*n;
+        int r=sum(sq);
+        if(n==r){
             System.out.println("Neon Number");
-        else
+        }
+        else{
             System.out.println("Not Neon Number");
+        }
     }
 }
