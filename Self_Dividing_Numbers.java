@@ -1,37 +1,35 @@
 import java.util.*;
-class s 
-{
-    public static boolean self(int n)
-	{
-		int h,d,l;
-		int i=0,c=0;
-		l=(int)Math.log10(n)+1;
-		h=n;
-		while (n>0)
-		{
-			d=n%10;
-			n=n/10;
-			if (d==0)
-			    continue;
-			if(h%d==0)
-				c+=1;
-			i++;
-		}
-		if (l==c)
-			return true;
-		else
-			return false;
-	}
-    public static void main(String args[])
-    {
-        Scanner sc=new Scanner(System.in);
-        int l,r;
-        l=sc.nextInt();
-        r=sc.nextInt();
-        for(int i=l;i<=r;i++)
+class a{
+    public static boolean sum(int n){
+        int d=0,c=0,num=n;
+        int k=(int)Math.log10(n)+1;
+        while(n>0)
         {
-            if (self(i))
-                System.out.print(i+" ");
+            d=n%10;
+            n=n/10;
+            if (d!=0)
+            {
+                if(num%d==0)
+                {
+                    c+=1;
+                }
+            }
+        }
+        if(k==c){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+    public static void main(String args[]){
+        Scanner sc = new Scanner(System.in);
+        int s=sc.nextInt();
+        int e=sc.nextInt();
+        for(int i=s;i<=e;i++){
+            if(sum(i)){
+                 System.out.print(i+" ");
+            }
         }
     }
 }
