@@ -1,35 +1,19 @@
 import java.util.*;
-class add
-{
-    public static int digit(int n)
-    {
-        int sum=0,d;
-        int j=0;
-        while (n>0)
+class a{
+    public static void main(String args[]){
+        Scanner sc = new Scanner(System.in);
+        int sum=0;
+        int n=sc.nextInt();
+        while (n > 0 || sum > 9)
         {
-            d=n%10;
-            n=n/10;
-            sum+=d;
-            j++;
+            if (n == 0) {
+                n = sum;
+                sum = 0;
+            }
+            sum += n % 10;
+            n /= 10;
         }
-        return sum;
-    }
-    public static void main(String args[])
-    {
-        Scanner sc=new Scanner(System.in);
-        int n,r;
-        n=sc.nextInt();
-        for(int i=1;;i++)
-        {
-            if (n>9)
-		{
-               n=digit(n);
-		}
-            else
-		{
-                System.out.println(n);
-                break;
-		}
-        }
+        System.out.println(sum);
+
     }
 }
